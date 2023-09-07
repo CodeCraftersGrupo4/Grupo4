@@ -1,0 +1,7 @@
+{
+  "name": "Control1Grupo4",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
