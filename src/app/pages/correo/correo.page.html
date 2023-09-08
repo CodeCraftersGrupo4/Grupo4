@@ -1,4 +1,4 @@
-<ion-content>
+<!-- <ion-content>
 
   <ion-title class="ion-padding-top ion-text-center">
     <h1>Duoc UC</h1>
@@ -20,4 +20,36 @@
       </form>      
     </ion-card>
   </div>  
+</ion-content> -->
+<ion-content>
+  <div class="login-img ion-padding-top ion-text-center">
+    <img src="assets/img/logoduoc.png" alt="">
+  </div>
+  <ion-title class="ion-padding-top ion-text-center">
+    <ion-label>
+      
+      <p>Sistema de asistencia DUOC</p>
+    </ion-label>
+  </ion-title>
+
+  <div id="login-form" class="ion-padding-vertical">
+    <ion-card class="ion-text-center ion-padding-vertical">      
+      <form>        
+        <ion-card-content>                    
+          <ion-item>      
+            <ion-icon name="person-circle-outline" slot="end"></ion-icon>
+            <ion-input name="correo" label="Correo" labelPlacement="floating" type="text" [(ngModel)]="usuario.correo"></ion-input>
+          </ion-item>                    
+          <ion-button  class="login-button" (click)="recuperarContrasenia()">Recuperar contraseña</ion-button>
+        </ion-card-content>
+      </form>      
+      <ion-label>
+        <br>
+        <ion-button class="recuperar-button" fill="clear" routerLink="/inicio">
+          Volver
+        </ion-button>
+      </ion-label>
+    </ion-card>
+  </div>  
+  
 </ion-content>

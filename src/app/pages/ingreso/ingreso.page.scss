@@ -1,0 +1,58 @@
+//IMPORTAR LA FUENTE UBUNTU, PONER ESTE IMPORT EN TODOS LOS CSS DE TODAS LA PAGINAS
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+*{
+    font-family: 'Ubuntu'; // HACER ESTO EN TODOS LOS CSS PARA APLICAR LA FUENTE A TODO *
+    box-shadow: none !important; // QUITAR LAS SOMBRAS DE LAS "CAJAS"
+}
+
+.scan-button{ // PROPIEDADES DEL BOTON "COMENZAR ESCANEO DE QR"
+    width: auto;
+    height: 50px;
+    background: #002036ff;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+    
+}
+
+.scan-button:hover{ // PROPIEDADES BOTON "COMENZAR ESCANEO DE QR" AL PASAR EL MOUSE POR ENCIMA
+    color: #f0ad1bff;
+}
+
+ion-card{ // PROPIEDADES DEL CARD, TODO EL TEXTO PRINCIPAL
+    display: grid;
+    gap: 30px;
+    place-items: left;
+    width: 100%;
+    margin: 0;
+    box-shadow: none !important;
+}
+
+.cerrar-button{ // PROPIEDADES BOTON CERRAR SESION
+    display: grid;
+    text-align: center;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.cerrar-button:hover{ // BOTON CERRAR SESION AL PASAR EL MOUSE POR ENCIMA
+    color: #f0ad1bff;
+    transition: all 0.3s;
+}
+
+.login-img{ // AJUSTAR DIV DE LA IMAGEN DUOC
+    width: auto;
+    object-fit: cover;
+    margin-bottom: 90px;
+
+}
+
+.login-img >img{ // AJUSTAR ESPECIFICAMENTE LA IMAGEN DUOC
+    padding-top: 30px;
+    width: 300px;
+}

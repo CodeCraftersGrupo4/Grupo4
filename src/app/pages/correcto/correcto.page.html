@@ -1,15 +1,4 @@
-<!-- Comienza el Header -->
-<!-- <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title #titulo>
-      SkeletonAPP
-    </ion-title>
-  </ion-toolbar>
-</ion-header> -->
-<!-- Termina el Header -->
-
-<!-- Comienza el Content -->
-<ion-content [fullscreen]="true" class="ion-padding-horizontal">
+<!-- <ion-content [fullscreen]="true" class="ion-padding-horizontal">
   <ion-title class="ion-padding-top">
     <ion-label class="ion-text-center">
       <h1>Duoc UC</h1>
@@ -25,10 +14,8 @@
           <p> Recuperar contraseña </p> 
           <h4>¡Correcto!</h4>                   
           <ion-item>
-            <p *ngIf="usuario">Tu contraseña es: {{usuario.password}}</p>      
-            <!-- <ion-input name="RespuestaSecreta" label="Respuesta secreta" labelPlacement="floating" type="text" [(ngModel)]="respuestaSecretaIngresada"></ion-input> -->
-          </ion-item>                    
-          <!-- <ion-button shape="block" (click)="verificarRespuestaSecreta()">Recuperar contraseña</ion-button> -->
+            <p *ngIf="usuario">Tu contraseña es: {{usuario.password}}</p>                  
+          </ion-item>                              
         </ion-card-content>
       </form>      
       <ion-label>
@@ -37,5 +24,38 @@
       </ion-label>
     </ion-card>
   </div>
+</ion-content> -->
+<ion-content>
+  <div class="login-img ion-padding-top ion-text-center">
+    <img src="assets/img/logoduoc.png" alt="">
+  </div>
+  <ion-title class="ion-padding-top ion-text-center">
+    <ion-label>
+      
+      <p>Sistema de asistencia DUOC</p>
+      <p> Recuperar contraseña </p>
+    </ion-label>
+  </ion-title>
 
+  <div id="login-form" class="ion-padding-vertical">
+    <ion-card class="ion-text-center ion-padding-vertical">      
+      <form>        
+        <ion-card-content>
+          <img src="assets/img/check.png" alt=""> 
+          <h4>¡Correcto!</h4>                       
+          <ion-item>      
+            <ion-icon name="key-outline" slot="end"></ion-icon>
+            <p *ngIf="usuario">Tu contraseña es: {{usuario.password}}</p>
+          </ion-item>                    
+        </ion-card-content>
+      </form>      
+      <ion-label>
+        <br>
+        <ion-button class="recuperar-button" fill="clear" routerLink="/inicio">
+          Volver
+        </ion-button>
+      </ion-label>
+    </ion-card>
+  </div>  
+  
 </ion-content>

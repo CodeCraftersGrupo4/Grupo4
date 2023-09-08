@@ -1,4 +1,5 @@
 import { Persona } from "./persona";
+import { AlertController } from '@ionic/angular';
 
 export class Usuario extends Persona {
 
@@ -6,6 +7,7 @@ export class Usuario extends Persona {
   public password: string;
   public preguntaSecreta: string;
   public respuestaSecreta: string;
+
 
   constructor(correo: string, password: string, preguntaSecreta: string, respuestaSecreta: string
       , nombre: string, apellido: string) {

@@ -1,16 +1,13 @@
-<ion-content>
+<!-- <ion-content>
   <ion-title class="ion-padding-top ion-text-center">
     <h1>DuocUC</h1>
     <ion-label>
       <p>Sistema de Asistencia Duoc</p>
     </ion-label>
   </ion-title>
-
   <div class="ion-padding-vertical">
-    <form>
-    
-    <ion-card colo="danger"class="ion-text-center ion-padding-vertical">
-      
+    <form>    
+    <ion-card colo="danger"class="ion-text-center ion-padding-vertical">    
     
     <ion-card-title class="ion-text-center">
       <ion-label>
@@ -20,7 +17,7 @@
       <ion-label>
         <h1>!Lo SENTIMOS PERO LOS DATOS INGRESADOS NO SON CORRECTOS</h1>
       </ion-label>
-      <img src="assets/img/incorrecto.png" alt="Imagen Incorrecta">    
+      <img src="assets/img/error.png" alt="Imagen Incorrecta">    
       <ion-label>
         <br>
         <a routerLink="">Iniciar Sesion</a>
@@ -29,4 +26,38 @@
   </ion-card>
 </form>
   </div>
+</ion-content> -->
+
+<ion-content>
+  <div class="incorrecto-img ion-padding-top ion-text-center">
+    <img src="assets/img/logoduoc.png" alt="">
+  </div>
+  <ion-title class="ion-padding-top ion-text-center">
+    <ion-label>
+      
+      <p>Sistema de asistencia DUOC</p>
+    </ion-label>
+  </ion-title>
+
+  <div id="login-form" class="ion-padding-vertical">
+    <ion-card class="ion-text-center ion-padding-vertical">      
+      <form>        
+        <ion-card-content>      
+          <ion-item>      
+            <ion-label>
+              <h1>Los datos ingresados no son correctos</h1>
+            </ion-label>
+          </ion-item>
+          <img src="assets/img/error.png" alt="Imagen Incorrecta">                    
+        </ion-card-content>
+      </form>      
+      <ion-label>
+        <br>
+        <ion-button class="recuperar-button" fill="clear" routerLink="/inicio">
+          Iniciar sesion
+        </ion-button>
+      </ion-label>
+    </ion-card>
+  </div>  
+  
 </ion-content>

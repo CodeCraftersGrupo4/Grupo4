@@ -1,0 +1,80 @@
+//IMPORTAR LA FUENTE UBUNTU, PONER ESTE IMPORT EN TODOS LOS CSS DE TODAS LA PAGINAS
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+
+*{
+    font-family: 'Ubuntu';// HACER ESTO EN TODOS LOS CSS PARA APLICAR LA FUENTE A TODO *
+    background-color: white;
+    box-shadow: none !important; // QUITAR LAS SOMBRAS DE LAS "CAJAS"
+}
+
+
+
+ion-card{ // PROPIEDADES DEL CARD, TODO EL TEXTO PRINCIPAL JUNTO
+    display: grid;
+    gap: 30px;
+    place-items: center;
+    width: 100%;
+    margin: 0;
+    box-shadow: none !important;
+}
+
+
+ion-input{ // PROPIEDADES DE LOS INPUT
+    width: 250px;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid gray;
+    font-size: 18px;
+    text-align: center;
+    transition: all 0.3s;
+    color: black;
+}
+
+ion-input:hover{ //INPUT AL PASAR EL MOUSE POR ENCIMA
+    border-bottom: 2px solid #f0ad1bff;
+}
+
+ion-input:focus{ //INPUT AL TENER EL CLICK PUESTO EN EL
+    border-bottom: 2px solid #f0ad1bff;
+}
+
+.login-button{ //BOTON DE INICIAR SESION
+    width: 91%;
+    height: 50px;
+    background: #002036ff;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+    
+}
+
+.login-button:hover{ //BOTON LOGIN AL PASAR EL MOUSE POR ENCIMA
+    color: #f0ad1bff;
+}
+
+.recuperar-button:hover{ //BOTON RECUPERAR CONTRASEÑA AL PASAR EL MOUSE POR ENCIMA
+    color: #f0ad1bff;
+    transition: all 0.3s;
+}
+
+.login-img{ //PROPIEDADES DEL DIV DE LA IMAGEN DUOC
+    width: auto;
+    object-fit: cover;
+    margin-bottom: 130px;
+
+}
+
+.login-img >img{ //PROPIEDADES DE ESPECIFICAMENTE LA IMAGEN DUOC
+    padding-top: 30px;
+    width: 300px;
+}
+
+
+ion-title{ //TITULO
+    font-size: 5rem;
+}

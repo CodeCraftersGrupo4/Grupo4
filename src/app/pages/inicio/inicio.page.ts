@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router'; // Permite navegar y pasar parámetros extra entre páginas
-import { ToastController } from '@ionic/angular'; // Permite mostrar mensajes emergente
+import { AlertController } from '@ionic/angular';
 import { Usuario } from 'src/app/model/usuario';
 
 @Component({
@@ -12,7 +12,7 @@ export class InicioPage implements OnInit {
 
   public usuario: Usuario;
 
- constructor(private router: Router, private toastController: ToastController) {
+ constructor(private router: Router,private alertController: AlertController) {
     this.usuario = new Usuario('', '', '', '', '', '')
 
     // this.usuario.setUsuario('atorres@duocuc.cl', '1234');
@@ -46,12 +46,21 @@ export class InicioPage implements OnInit {
     }
   }
 
-
-  async mostrarMensaje(mensaje: string, duracion?: number) {
-    const toast = await this.toastController.create({
-        message: mensaje,
-        duration: duracion? duracion: 2000
-      });
-    toast.present();
+  async mostrarMensaje(message: string) {
+    const alert = await this.alertController.create({
+      header: 'Aviso del sistema',
+      message: message, // Utiliza el mensaje pasado como argumento
+      buttons: ['OK'],
+    });
+  
+    await alert.present();
   }
+
+  // async mostrarMensaje(mensaje: string, duracion?: number) {
+  //   const toast = await this.toastController.create({
+  //       message: mensaje,
+  //       duration: duracion? duracion: 2000
+  //     });
+  //   toast.present();
+  // }
 }
