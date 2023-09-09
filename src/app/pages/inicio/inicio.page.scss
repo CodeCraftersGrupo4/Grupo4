@@ -75,6 +75,16 @@ ion-input:focus{ //INPUT AL TENER EL CLICK PUESTO EN EL
 }
 
 
-ion-title{ //TITULO
+.ion-padding-top ion-text-center{ //TITULO
     font-size: 5rem;
+}
+
+
+.footer-title{
+    text-align: end;
+    background-color: #002036ff;
+    color: #f0ad1bff;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

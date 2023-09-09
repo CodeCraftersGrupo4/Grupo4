@@ -1,6 +1,8 @@
 //import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import jsQR, { QRCode } from 'jsqr';
+import { AnimationController} from '@ionic/angular';
+
 @Component({
   selector: 'app-ingreso',
   templateUrl: './ingreso.page.html',
@@ -14,11 +16,37 @@ export class IngresoPage implements OnInit {
   @ViewChild('canvas')
   private canvas!: ElementRef;
 
+  @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
+
   public escaneando = false;
   public datosQR: any = {};
-  constructor() { }
+  constructor(private animationController: AnimationController) { }
 
   ngOnInit() {
+  }
+
+  public ngAfterViewInit(): void {
+    if (this.itemTitulo) {
+      const animation = this.animationController
+        .create()
+        .addElement(this.itemTitulo.nativeElement)
+        .iterations(Infinity)
+        .duration(9000)
+        .fromTo('transform', 'translate(0%)', 'translate(100%)')
+        .fromTo('opacity', 0.8, 1);
+
+      animation.play();
+    }
+  }
+
+  public animateItem(elementRef: any) {
+    this.animationController
+      .create()
+      .addElement(elementRef)
+      .iterations(1)
+      .duration(600)
+      .fromTo('transform', 'translate(100%)', 'translate(0%)')
+      .play();
   }
 
   public async comenzarEscaneoQR() {

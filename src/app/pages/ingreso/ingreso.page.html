@@ -1,15 +1,29 @@
 <ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="header-title" #titulo>
+      Sistema de asistencia DUOC
+    </ion-title>
+  </ion-toolbar>
   <ion-toolbar class="ion-text-center">
     <div class="login-img ion-padding-top ion-text-center">
       <img src="assets/img/logoduoc.png" alt="">
     </div>
-    <h6>Sistema de asistencia DUOC</h6>
+    <!-- <h6>Sistema de asistencia DUOC</h6> -->
   </ion-toolbar>
 </ion-header>
+
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-title #titulo>
+      SkeletonAPP
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
 <br>
 
 <ion-content>
-
+<!--  -->
   <ion-button class="scan-button" *ngIf="!escaneando" (click)="comenzarEscaneoQR()" expand="full" shape="round">
     <ion-icon slot="start" name="videocam-outline"></ion-icon>
     Comenzar Escaneo de QR
