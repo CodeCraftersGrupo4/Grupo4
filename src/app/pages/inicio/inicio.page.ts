@@ -8,6 +8,7 @@ import { Usuario } from 'src/app/model/usuario';
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
 })
+
 export class InicioPage implements OnInit {
 
   public usuario: Usuario;

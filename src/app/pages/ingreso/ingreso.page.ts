@@ -2,6 +2,8 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import jsQR, { QRCode } from 'jsqr';
 import { AnimationController} from '@ionic/angular';
+import { Usuario } from 'src/app/model/usuario';
+import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-ingreso',
@@ -18,9 +20,26 @@ export class IngresoPage implements OnInit {
 
   @ViewChild('titulo', { read: ElementRef }) itemTitulo!: ElementRef;
 
+  public usuario: Usuario;
+
   public escaneando = false;
   public datosQR: any = {};
-  constructor(private animationController: AnimationController) { }
+  constructor(private activeroute: ActivatedRoute 
+            , private router: Router,
+            private animationController: AnimationController) {
+    this.usuario = new Usuario('', '', '', '', '', '');
+
+    this.activeroute.queryParams.subscribe(params => { 
+      const nav = this.router.getCurrentNavigation();
+      if (nav) {
+        if (nav.extras.state) {
+          this.usuario = nav.extras.state['usuario'];
+          return;
+        }
+      }
+      this.router.navigate(['/login']);
+    });
+   }
 
   ngOnInit() {
   }

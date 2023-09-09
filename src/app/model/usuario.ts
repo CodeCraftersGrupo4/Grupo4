@@ -35,33 +35,26 @@ export class Usuario extends Persona {
   public listaUsuariosValidos(): Usuario[] {
     const lista = [];
     lista.push(new Usuario(
-        'sin.datos@duocuc.cl'
-      , '1234'
-      , ''
-      , ''
-      , ''
-      , ''));
-    lista.push(new Usuario(
         'atorres@duocuc.cl'
       , '1234'
-      , '¿Cuál es tu animal favorito?'
+      , 'Nombre de su mascota'
       , 'gato'
       , 'Ana'
-      , 'Torres'));
+      , 'Torres Leiva'));
     lista.push(new Usuario(
-        'jperez@duocuc.cl'
-      , '5678'
-      , '¿Cuál es tu postre favorito?'
-      , 'panqueques'
-      , 'Juan'
-      , 'Pérez'));
+        'avalenzuela@duocuc.cl'
+      , 'qwer'
+      , 'Nombre de su mejor amigo'
+      , 'juanito'
+      , 'Alberto'
+      , 'Valenzuela Nuñez'));
     lista.push(new Usuario(
-        'cmujica@duocuc.cl'
-      , '0987'
-      , '¿Cuál es tu vehículo favorito?'
-      , 'moto'
+        'cfuentes@duocuc.cl'
+      , 'asdf'
+      , '¿Lugar de nacimiento de su madre'
+      , 'Valparaiso'
       , 'Carla'
-      , 'Mujica'));
+      , 'Fuente González'));
     return lista;
   }
 
@@ -96,14 +89,14 @@ export class Usuario extends Persona {
     if (this.password.trim() === '') {
       return 'Para entrar al sistema debe ingresar una contraseña.';
     }
-    for(let i = 0; i < this.password.length; i++) {
-      if ('0123456789'.indexOf(this.password.charAt(i)) === -1) {
-        return 'La contraseña debe ser numérica.';
-      }
-    }
-    if (this.password.length !== 4) {
-      return 'La contraseña debe ser numérica de 4 dígitos.';
-    }
+    // for(let i = 0; i < this.password.length; i++) {
+    //   if ('0123456789'.indexOf(this.password.charAt(i)) === -1) {
+    //     return 'La contraseña debe ser numérica.';
+    //   }
+    // }
+    // if (this.password.length !== 4) {
+    //   return 'La contraseña debe ser numérica de 4 dígitos.';
+    // }
     return '';
   }
 
@@ -128,7 +121,7 @@ export class Usuario extends Persona {
     return this.validarCredencialesCorreo();
   }
   // public validarUsuarioRespuesta(): string {
-  //   return this.validarCredencialesRespuesta();
+  //   return this.validarCredencialesRespuesta(); 
   // }
 
 }

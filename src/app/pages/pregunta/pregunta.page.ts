@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { Usuario } from 'src/app/model/usuario';
-import { ToastController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class PreguntaPage implements OnInit {
    constructor(
         private activeroute: ActivatedRoute 
       , private router: Router
-      , private toastController: ToastController) { 
+      , private alertController: AlertController) { 
 
     this.usuario = new Usuario('', '', '', '', '', '');
 
@@ -47,12 +47,14 @@ export class PreguntaPage implements OnInit {
   }
 
 
-  async mostrarMensaje(mensaje: string, duracion?: number) {
-    const toast = await this.toastController.create({
-        message: mensaje,
-        duration: duracion? duracion: 2000
-      });
-    toast.present();
+  async mostrarMensaje(message: string) {
+    const alert = await this.alertController.create({
+      header: 'Aviso del sistema',
+      message: message, // Utiliza el mensaje pasado como argumento
+      buttons: ['OK'],
+    });
+  
+    await alert.present();
   }
 
 }

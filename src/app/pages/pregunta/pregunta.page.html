@@ -41,6 +41,7 @@
     <ion-card class="ion-text-center ion-padding-vertical">      
       <form>        
         <ion-card-content>
+          <p *ngIf="usuario">   {{ usuario.nombre }} {{ usuario.apellido }}</p>
           <p *ngIf="usuario">Pregunta secreta: {{usuario.preguntaSecreta}}</p>                     
           <ion-item>      
             <ion-icon name="key-outline" slot="end"></ion-icon>
@@ -59,3 +60,9 @@
   </div>  
   
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="footer-title">Copyright © 2023 CodeCrafters.</ion-title>
+  </ion-toolbar>
+</ion-footer>
