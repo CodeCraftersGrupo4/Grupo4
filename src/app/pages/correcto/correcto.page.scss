@@ -76,7 +76,13 @@ ion-input:focus{ //INPUT AL TENER EL CLICK PUESTO EN EL
 
 
 ion-title{ //TITULO
+ 
     font-size: 5rem;
+}
+
+.correcto-img >img{ //PROPIEDADES DE ESPECIFICAMENTE LA IMAGEN DUOC
+    padding-top: 30px;
+    width: 340px;
 }
 
 .footer-title{
