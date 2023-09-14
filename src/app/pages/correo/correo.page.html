@@ -1,27 +1,4 @@
 <!-- <ion-content>
-
-  <ion-title class="ion-padding-top ion-text-center">
-    <h1>Duoc UC</h1>
-    <ion-label>
-      <p>Recupera tu contraseña</p>
-    </ion-label>
-  </ion-title>
-
-  <div class="ion-padding-vertical">
-    <ion-card class="ion-text-center ion-padding-vertical">      
-      <form>        
-        <ion-card-content>                    
-          <ion-item>      
-            <ion-input name="correo" label="Correo" labelPlacement="floating" type="text" [(ngModel)]="usuario.correo"></ion-input>
-          </ion-item>                    
-          <ion-button shape="block" (click)="recuperarContrasenia()">Recuperar contraseña</ion-button>
-          <a routerLink="/inicio">volver</a>
-        </ion-card-content>
-      </form>      
-    </ion-card>
-  </div>  
-</ion-content> -->
-<ion-content>
   <div class="login-img ion-padding-top ion-text-center">
     <img src="assets/img/logoduoc.png" alt="">
   </div>
@@ -29,6 +6,44 @@
     <ion-label>
       
       <p>Sistema de asistencia DUOC</p>
+    </ion-label>
+  </ion-title>
+
+  <div id="login-form" class="ion-padding-vertical">
+    <ion-card class="ion-text-center ion-padding-vertical">      
+      <form>        
+        <ion-card-content>                    
+          <ion-item>      
+            <ion-icon name="person-circle-outline" slot="end"></ion-icon>
+            <ion-input name="correo" label="Correo" labelPlacement="floating" type="text" [(ngModel)]="usuario.correo"></ion-input>
+          </ion-item>                    
+          <ion-button  class="login-button" (click)="recuperarContrasenia()">Recuperar contraseña</ion-button>
+        </ion-card-content>
+      </form>      
+      <ion-label>
+        <br>
+        <ion-button class="recuperar-button" fill="clear" routerLink="/inicio">
+          Volver
+        </ion-button>
+      </ion-label>
+    </ion-card>
+  </div>  
+  
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="footer-title">Copyright © 2023 CodeCrafters.</ion-title>
+  </ion-toolbar>
+</ion-footer> -->
+
+<ion-content>
+  <div class="login-img ion-padding-top ion-text-center">
+    <img src="assets/img/logoduoc.png" alt="">
+  </div>
+  <ion-title class="ion-padding-top ion-text-center">
+    <ion-label>
+      
+      <p class="titulo-sistema">Sistema de asistencia DUOC</p>
     </ion-label>
   </ion-title>
 

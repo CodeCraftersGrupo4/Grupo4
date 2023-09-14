@@ -1,31 +1,4 @@
-<!-- <ion-content [fullscreen]="true" class="ion-padding-horizontal">
-  <ion-title class="ion-padding-top">
-    <ion-label class="ion-text-center">
-      <h1>Duoc UC</h1>
-      <h3>Sistema asistencia DUOC</h3>
-      <p *ngIf="usuario">Usuario: {{ usuario.nombre }} {{ usuario.apellido }}</p>      
-    </ion-label>
-  </ion-title>
-
-  <div class="ion-padding-vertical">
-    <ion-card class="ion-text-center ion-padding-vertical">      
-      <form>        
-        <ion-card-content>
-          <p> Recuperar contraseña </p> 
-          <h4>¡Correcto!</h4>                   
-          <ion-item>
-            <p *ngIf="usuario">Tu contraseña es: {{usuario.password}}</p>                  
-          </ion-item>                              
-        </ion-card-content>
-      </form>      
-      <ion-label>
-        <br>
-        <a routerLink="/correo">Volver</a>
-      </ion-label>
-    </ion-card>
-  </div>
-</ion-content> -->
-<ion-content>
+<!-- <ion-content>
   <div class="login-img ion-padding-top ion-text-center">
     <img src="assets/img/logoduoc.png" alt="">
   </div>
@@ -48,6 +21,48 @@
           <ion-item>      
             <ion-icon name="key-outline" slot="end"></ion-icon>
             <p *ngIf="usuario">Tu contraseña es: {{usuario.password}}</p>
+          </ion-item>                    
+        </ion-card-content>
+      </form>      
+      <ion-label>
+        <br>
+        <ion-button class="recuperar-button" fill="clear" routerLink="/inicio">
+          Volver
+        </ion-button>
+      </ion-label>
+    </ion-card>
+  </div>  
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="footer-title">Copyright © 2023 CodeCrafters.</ion-title>
+  </ion-toolbar>
+</ion-footer> -->
+<ion-content>
+  <div class="login-img ion-padding-top ion-text-center">
+    <img src="assets/img/logoduoc.png" alt="">
+  </div>
+  <ion-title class="ion-padding-top ion-text-center">
+    <ion-label>
+      
+      <p class="titulo-sistema">Sistema de asistencia DUOC</p>
+      <p class="titulo-recuperar"> Recuperar contraseña </p>
+    </ion-label>
+  </ion-title>
+
+  <div id="login-form" class="ion-padding-vertical">
+    <ion-card class="ion-text-center ion-padding-vertical">      
+      <form>        
+        <ion-card-content>
+          <div class="correcto-img">
+            <img src="assets/img/dedoArriba.png" alt=""> 
+          </div> 
+          <h4 class="texto-correcto">¡Correcto!</h4>                       
+          <ion-item class="contra-mostrar">      
+            <ion-icon name="key-outline" slot="end"></ion-icon>
+            <p *ngIf="usuario" class="contra">Tu contraseña es: {{usuario.password}}</p>
           </ion-item>                    
         </ion-card-content>
       </form>      

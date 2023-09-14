@@ -26,8 +26,13 @@ export class CorreoPage implements OnInit {
     if (this.usuario) {
       
       const mensajeError = this.usuario.validarUsuarioCorreo();
-      if (mensajeError) {
+
+      if(this.usuario.correo === ''){
+        this.mostrarMensaje('Este campo no debe ir vacio.');
+        return; 
+      }else if(mensajeError) {
         this.mostrarMensaje(mensajeError);
+        this.router.navigate(['/incorrecto']); 
         return;
       }
 

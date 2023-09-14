@@ -1,32 +1,4 @@
-<!-- 
-<ion-content [fullscreen]="true" class="ion-padding-horizontal">
-  <ion-title class="ion-padding-top">
-    <ion-label class="ion-text-center">
-      <h1>Duoc UC</h1>
-      <h3>Sistema asistencia DUOC</h3>
-      <p *ngIf="usuario">Usuario: {{ usuario.nombre }} {{ usuario.apellido }}</p>      
-    </ion-label>
-  </ion-title>
-
-  <div class="ion-padding-vertical">
-    <ion-card class="ion-text-center ion-padding-vertical">      
-      <form>        
-        <ion-card-content>
-          <p *ngIf="usuario">Pregunta secreta: {{usuario.preguntaSecreta}}</p>                    
-          <ion-item>      
-            <ion-input name="RespuestaSecreta" label="Respuesta secreta" labelPlacement="floating" type="text" [(ngModel)]="respuestaSecretaIngresada"></ion-input>
-          </ion-item>                    
-          <ion-button shape="block" (click)="verificarRespuestaSecreta()">Recuperar contraseña</ion-button>
-        </ion-card-content>
-      </form>      
-      <ion-label>
-        <br>
-        <a routerLink="/correo">Volver</a>
-      </ion-label>
-    </ion-card>
-  </div>
-</ion-content> -->
-<ion-content>
+<!-- <ion-content>
   <div class="login-img ion-padding-top ion-text-center">
     <img src="assets/img/logoduoc.png" alt="">
   </div>
@@ -43,6 +15,46 @@
         <ion-card-content>
           <p *ngIf="usuario">   {{ usuario.nombre }} {{ usuario.apellido }}</p>
           <p *ngIf="usuario">Pregunta secreta: {{usuario.preguntaSecreta}}</p>                     
+          <ion-item>      
+            <ion-icon name="key-outline" slot="end"></ion-icon>
+            <ion-input name="respuestaSecreta" label="Respuesta secreta" labelPlacement="floating" type="text" [(ngModel)]="respuestaSecretaIngresada"></ion-input>
+          </ion-item>                    
+          <ion-button  class="login-button" (click)="verificarRespuestaSecreta()">Recuperar contraseña</ion-button>
+        </ion-card-content>
+      </form>      
+      <ion-label>
+        <br>
+        <ion-button class="recuperar-button" fill="clear" routerLink="/correo">
+          Volver
+        </ion-button>
+      </ion-label>
+    </ion-card>
+  </div>  
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="footer-title">Copyright © 2023 CodeCrafters.</ion-title>
+  </ion-toolbar>
+</ion-footer> -->
+<ion-content>
+  <div class="login-img ion-padding-top ion-text-center">
+    <img src="assets/img/logoduoc.png" alt="">
+  </div>
+  <ion-title class="ion-padding-top ion-text-center">
+    <ion-label>
+      
+      <p class="titulo-sistema">Sistema de asistencia DUOC</p>
+    </ion-label>
+  </ion-title>
+
+  <div id="login-form" class="ion-padding-vertical">
+    <ion-card class="ion-text-center ion-padding-vertical">      
+      <form>        
+        <ion-card-content>
+          <p class="titulo-nombre" *ngIf="usuario">   {{ usuario.nombre }} {{ usuario.apellido }}</p>
+          <p class="titulo-pregunta" *ngIf="usuario">Pregunta secreta: {{usuario.preguntaSecreta}}</p>                     
           <ion-item>      
             <ion-icon name="key-outline" slot="end"></ion-icon>
             <ion-input name="respuestaSecreta" label="Respuesta secreta" labelPlacement="floating" type="text" [(ngModel)]="respuestaSecretaIngresada"></ion-input>

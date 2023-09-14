@@ -4,11 +4,26 @@
 
 *{
     font-family: 'Ubuntu';// HACER ESTO EN TODOS LOS CSS PARA APLICAR LA FUENTE A TODO *
-    background-color: white;
+    background-color: transparent;
     box-shadow: none !important; // QUITAR LAS SOMBRAS DE LAS "CAJAS"
 }
 
+ion-content {
+    --background: url(../../../assets/img/estudio.jpg) no-repeat center/cover fixed;
+    
+}
 
+.titulo-sistema{
+    font-size: large;
+    padding-bottom: 30px;
+    color: #002036ff;
+}
+
+.texto-incorrecto{
+    font-size: large;
+    padding-bottom: 30px;
+    color: #002036ff;
+}
 
 ion-card{ // PROPIEDADES DEL CARD, TODO EL TEXTO PRINCIPAL JUNTO
     display: grid;
@@ -57,20 +72,16 @@ ion-input:focus{ //INPUT AL TENER EL CLICK PUESTO EN EL
     color: #f0ad1bff;
 }
 
-.recuperar-button:hover{ //BOTON RECUPERAR CONTRASEÑA AL PASAR EL MOUSE POR ENCIMA
-    color: #f0ad1bff;
-    transition: all 0.3s;
-}
 
 .incorrecto-img{ //PROPIEDADES DEL DIV DE LA IMAGEN DUOC
     object-fit: cover;
-    margin-bottom: 130px;
+    margin-bottom: 100px;
 
 }
 
 .incorrecto-img >img{ //PROPIEDADES DE ESPECIFICAMENTE LA IMAGEN DUOC
     padding-top: 30px;
-    width: 360px;
+    width: 320px;
 }
 
 
@@ -85,4 +96,15 @@ ion-title{ //TITULO
     font-size: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.recuperar-button{
+    background-color: #002036ff;
+    color: #f0ad1bff;
+    border-radius: 6px;
+}
+
+.recuperar-button:hover{ //BOTON RECUPERAR CONTRASEÑA AL PASAR EL MOUSE POR ENCIMA
+    color: rgb(243, 222, 177);
+    transition: all 0.3s;
 }

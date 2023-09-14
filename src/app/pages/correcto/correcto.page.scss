@@ -4,11 +4,14 @@
 
 *{
     font-family: 'Ubuntu';// HACER ESTO EN TODOS LOS CSS PARA APLICAR LA FUENTE A TODO *
-    background-color: white;
+    background-color: transparent;
     box-shadow: none !important; // QUITAR LAS SOMBRAS DE LAS "CAJAS"
 }
 
-
+ion-content {
+    --background: url(../../../assets/img/estudio.jpg) no-repeat center/cover fixed;
+    
+  }
 
 ion-card{ // PROPIEDADES DEL CARD, TODO EL TEXTO PRINCIPAL JUNTO
     display: grid;
@@ -17,6 +20,7 @@ ion-card{ // PROPIEDADES DEL CARD, TODO EL TEXTO PRINCIPAL JUNTO
     width: 100%;
     margin: 0;
     box-shadow: none !important;
+
 }
 
 
@@ -53,36 +57,51 @@ ion-input:focus{ //INPUT AL TENER EL CLICK PUESTO EN EL
     
 }
 
+.texto-correcto{
+    font-size: 23px;
+    color: #002036ff;
+}
+
+.contra{
+    font-size: larger;
+}
+
+.contra-mostrar{
+    border-radius: 12px;
+    
+}
+
 .login-button:hover{ //BOTON LOGIN AL PASAR EL MOUSE POR ENCIMA
     color: #f0ad1bff;
 }
 
-.recuperar-button:hover{ //BOTON RECUPERAR CONTRASEÑA AL PASAR EL MOUSE POR ENCIMA
-    color: #f0ad1bff;
-    transition: all 0.3s;
-}
+
 
 .login-img{ //PROPIEDADES DEL DIV DE LA IMAGEN DUOC
     width: auto;
     object-fit: cover;
-    margin-bottom: 130px;
+    margin-bottom: 90px;
 
-}
-
-.login-img >img{ //PROPIEDADES DE ESPECIFICAMENTE LA IMAGEN DUOC
-    padding-top: 30px;
-    width: 300px;
-}
-
-
-ion-title{ //TITULO
- 
-    font-size: 5rem;
 }
 
 .correcto-img >img{ //PROPIEDADES DE ESPECIFICAMENTE LA IMAGEN DUOC
     padding-top: 30px;
-    width: 340px;
+    width: 330px;
+}
+
+
+ion-title{ //TITULO
+    font-size: 5rem;
+}
+
+.titulo-sistema{
+    font-size: large;
+    padding-bottom: 30px;
+    color: #002036ff;
+}
+
+.titulo-recuperar{
+    color: #002036ff;
 }
 
 .footer-title{
@@ -92,4 +111,15 @@ ion-title{ //TITULO
     font-size: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.recuperar-button{
+    background-color: #002036ff;
+    color: #f0ad1bff;
+    border-radius: 6px;
+}
+
+.recuperar-button:hover{ //BOTON RECUPERAR CONTRASEÑA AL PASAR EL MOUSE POR ENCIMA
+    color: rgb(243, 222, 177);
+    transition: all 0.3s;
 }

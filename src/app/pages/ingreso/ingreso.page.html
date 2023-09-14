@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="primary">
     <ion-title class="header-title" #titulo>
       Sistema de asistencia DUOC
@@ -10,22 +10,14 @@
       <p><strong>¡Bienvenido!</strong></p>
       <p *ngIf="usuario">   {{ usuario.nombre }} {{ usuario.apellido }}</p>
     </div>
-    <!-- <h6>Sistema de asistencia DUOC</h6> -->
+
   </ion-toolbar>
 </ion-header>
-
-<!-- <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title #titulo>
-      SkeletonAPP
-    </ion-title>
-  </ion-toolbar>
-</ion-header> -->
 
 <br>
 
 <ion-content>
-<!--  -->
+
   <ion-button class="scan-button" *ngIf="!escaneando" (click)="comenzarEscaneoQR()" expand="full" shape="round">
     <ion-icon slot="start" name="videocam-outline"></ion-icon>
     Comenzar Escaneo de QR
@@ -45,12 +37,80 @@
         <ion-card-title>Los datos del Código QR son los siguientes:</ion-card-title>
       </ion-card-header>
       <h2 *ngIf="datosQR">
+
+        <ion-card-content>
+          <p><strong>Sede:</strong> {{ datosQR.sede }}</p>
+          <p><strong>Codigo de la asignatura:</strong> {{ datosQR.idAsignatura }}</p>
+          <p><strong>Sección:</strong> {{ datosQR.seccion }}</p>
+          <p><strong>Nombre de la Asignatura:</strong> {{ datosQR.nombreAsignatura }}</p>
+          <p><strong>Nombre del Profesor:</strong> {{ datosQR.nombreProfesor }}</p>
+          <p><strong>Día:</strong> {{ datosQR.dia }}</p>
+          <p><strong>Bloque de Inicio:</strong> {{ datosQR.bloqueInicio }}</p>
+          <p><strong>Bloque de Término:</strong> {{ datosQR.bloqueTermino }}</p>
+          <p><strong>Hora de Inicio:</strong> {{ datosQR.horaInicio }}</p>
+          <p><strong>Hora de Término:</strong> {{ datosQR.horaFin }}</p>
+        </ion-card-content>
+      </h2>
+    </ion-card-content>
+  </ion-card>
+  <ion-button class="cerrar-button" fill="clear" routerLink="/inicio">
+    CERRAR SESIÓN
+  </ion-button>  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="footer-title">Copyright © 2023 CodeCrafters.</ion-title>
+  </ion-toolbar>
+</ion-footer> -->
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="header-title" #titulo>
+      Sistema de asistencia DUOC
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar class="ion-text-center">
+    <div class="login-img ion-padding-top ion-text-center">
+      <img src="assets/img/logoduoc.png" alt="">
+      <p><strong>¡Bienvenido(a)!</strong></p>
+      <p *ngIf="usuario" class="nombreingreso">   {{ usuario.nombre }} {{ usuario.apellido }}</p>
+    </div>
+    <!-- <h6>Sistema de asistencia DUOC</h6> -->
+  </ion-toolbar>
+</ion-header>
+
+
+
+<br>
+
+<ion-content>
+<!--  -->
+  <ion-button class="scan-button" *ngIf="!escaneando" (click)="comenzarEscaneoQR()" expand="full" shape="round">
+    <ion-icon slot="start" name="videocam-outline"></ion-icon>
+    Comenzar Escaneo de QR
+  </ion-button>
+
+  <ion-button class="scan-button" *ngIf="escaneando" (click)="detenerEscaneoQR()" expand="full" shape="round">
+    <ion-icon slot="start" name="stop-circle-outline"></ion-icon>
+    Detener escaneo de QR
+  </ion-button>
+
+  <video #video [hidden]="!escaneando" width="100%"></video>
+  <canvas #canvas hidden></canvas>
+
+  <ion-card>
+    <ion-card-content class="borde">
+      <ion-card-header>
+        <ion-card-title>Datos de la asignatura:</ion-card-title>
+      </ion-card-header>
+      <h2 *ngIf="datosQR">
         <!-- <ion-card-header>
           Detalles del Código QR
         </ion-card-header> -->
-        <ion-card-content>
+        <ion-card-content class="data-grid">
           <p><strong>Sede:</strong> {{ datosQR.sede }}</p>
-          <p><strong>ID de Asignatura:</strong> {{ datosQR.idAsignatura }}</p>
+          <p><strong>Codigo de la asignatura:</strong> {{ datosQR.idAsignatura }}</p>
           <p><strong>Sección:</strong> {{ datosQR.seccion }}</p>
           <p><strong>Nombre de la Asignatura:</strong> {{ datosQR.nombreAsignatura }}</p>
           <p><strong>Nombre del Profesor:</strong> {{ datosQR.nombreProfesor }}</p>

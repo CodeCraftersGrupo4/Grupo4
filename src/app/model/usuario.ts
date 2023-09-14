@@ -118,7 +118,7 @@ export class Usuario extends Persona {
     return this.validarCorreo() || this.validarPassword() || this.validarCredenciales()||this.validarCredencialesCorreo();
   }
   public validarUsuarioCorreo(): string {
-    return this.validarCredencialesCorreo();
+    return this.validarCorreo()||this.validarCredencialesCorreo();
   }
   // public validarUsuarioRespuesta(): string {
   //   return this.validarCredencialesRespuesta(); 

@@ -4,10 +4,24 @@
 *{
     font-family: 'Ubuntu'; // HACER ESTO EN TODOS LOS CSS PARA APLICAR LA FUENTE A TODO *
     box-shadow: none !important; // QUITAR LAS SOMBRAS DE LAS "CAJAS"
+    background-color: transparent;
+}
+
+ion-content {
+    --background: url(../../../assets/img/estudio.jpg) no-repeat center/cover fixed;
+    
+}
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .scan-button{ // PROPIEDADES DEL BOTON "COMENZAR ESCANEO DE QR"
-    width: auto;
+    width: 320px;
     height: 50px;
     background: #002036ff;
     color: white;
@@ -17,7 +31,8 @@
     font-weight: 600;
     letter-spacing: 2px;
     transition: all 0.3s;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .scan-button:hover{ // PROPIEDADES BOTON "COMENZAR ESCANEO DE QR" AL PASAR EL MOUSE POR ENCIMA
@@ -38,6 +53,15 @@ ion-card{ // PROPIEDADES DEL CARD, TODO EL TEXTO PRINCIPAL
     text-align: center;
     border-bottom: none !important;
     box-shadow: none !important;
+    margin-left: 160px;
+    margin-right: 150px;
+}
+
+.cerrar-button{
+    background-color: #002036ff;
+    color: white;
+    border-radius: 6px;
+    width: 180px;
 }
 
 .cerrar-button:hover{ // BOTON CERRAR SESION AL PASAR EL MOUSE POR ENCIMA
@@ -48,8 +72,8 @@ ion-card{ // PROPIEDADES DEL CARD, TODO EL TEXTO PRINCIPAL
 .login-img{ // AJUSTAR DIV DE LA IMAGEN DUOC
     width: auto;
     object-fit: cover;
-    margin-bottom: 90px;
-
+    margin-bottom: 30px;
+    
 }
 
 .login-img >img{ // AJUSTAR ESPECIFICAMENTE LA IMAGEN DUOC
@@ -69,3 +93,19 @@ ion-card{ // PROPIEDADES DEL CARD, TODO EL TEXTO PRINCIPAL
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+.nombreingreso{
+    font-size: 23px;
+}
+
+.data-grid{
+    display: grid;
+    // grid-template-columns: max-content auto;
+    gap: 10px;
+    color:#002036ff;
+}
+
+ion-card-title{
+    color: #002036ff;
+}
+  

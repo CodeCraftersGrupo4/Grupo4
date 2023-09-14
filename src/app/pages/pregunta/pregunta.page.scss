@@ -4,11 +4,31 @@
 
 *{
     font-family: 'Ubuntu';// HACER ESTO EN TODOS LOS CSS PARA APLICAR LA FUENTE A TODO *
-    background-color: white;
+    background-color: transparent;
     box-shadow: none !important; // QUITAR LAS SOMBRAS DE LAS "CAJAS"
 }
 
+ion-content {
+    --background: url(../../../assets/img/estudio.jpg) no-repeat center/cover fixed;
+    
+  }
 
+.titulo-sistema,.titulo-nombre,.titulo-pregunta{
+    font-size: large;
+    padding-bottom: 30px;
+    color: #002036ff;
+}
+
+.texto-usuario{
+    font-size: large;
+    padding-bottom: 1px;
+    color: #002036ff;
+}
+
+.texto-pregunta{
+    color: #002036ff;
+    font-size: medium;
+}
 
 ion-card{ // PROPIEDADES DEL CARD, TODO EL TEXTO PRINCIPAL JUNTO
     display: grid;
@@ -87,3 +107,19 @@ ion-title{ //TITULO
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+.recuperar-button{
+    background-color: #002036ff;
+    color: white;
+    border-radius: 6px;
+}
+
+.recuperar-button:hover{ //BOTON RECUPERAR CONTRASEÑA AL PASAR EL MOUSE POR ENCIMA
+    color: #f0ad1bff;
+    transition: all 0.3s;
+}
+
+#login-form ion-item {
+    --background: transparent;
+    --highlight-background-focused: rgba(0, 0, 0, 0.1); /* Color de fondo al enfocar el campo */
+  }
